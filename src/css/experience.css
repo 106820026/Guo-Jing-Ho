@@ -1,0 +1,92 @@
+/* NAVBAR */
+header .navbar.shrink {
+    height: 70px;
+    transition: height 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+/* MAIN */
+main {
+    padding: 1rem 1rem;
+}
+
+h2.title {
+    font-size: 3rem;
+    font-family: var(--title-font);
+    color: #1B3764;
+}
+
+.jobs {
+    display: flex;
+    justify-content: center;
+}
+
+.job {
+    padding: 0.5rem;
+    margin: 1rem 1rem;
+    width: 60%;
+    border-radius: 20px;
+    display: block;
+    justify-content: center;
+    background: rgba(255, 202, 66, 50%);
+    backdrop-filter: blur(15px);
+}
+
+h3.subtitle {
+    color: #1B3764;
+    font-size: 2.5rem;
+    border-bottom: 1.5px solid #1B3764;
+}
+
+h4.text {
+    display: flow-root;
+    color: #1B3764;
+    font-size: 1.5rem;
+}
+
+.job ul li {
+    color: #1B3764;
+    font-size: 1.2rem;
+    padding-left: 1.5rem;
+    list-style: inside;
+}
+
+.company_name {
+    float: left;
+}
+
+.date {
+    float: right;
+}
+
+/* RESPONSIVE WINDOW */
+@media(max-width:992px) {
+    .job {
+        width: 80%;
+    }
+
+    h3.subtitle {
+        font-size: 2rem;
+    }
+
+    h4.text {
+        font-size: 1.2rem;
+    }
+}
+
+@media(max-width:576px) {
+    .job {
+        width: 95%;
+    }
+
+    h3.subtitle {
+        font-size: 1.5rem;
+    }
+
+    h4.text {
+        font-size: 1rem;
+    }
+
+    .job ul li {
+        font-size: 1rem;
+    }
+}

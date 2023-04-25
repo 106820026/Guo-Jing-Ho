@@ -1,0 +1,144 @@
+/* NAVBAR */
+.navbar {
+    height: 70px;
+}
+
+header .navbar.expand {
+    height: 230px;
+    transition: height 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.navbar .profile {
+    position: relative;
+    top: 20px;
+}
+
+.navbar .profile img {
+    border-radius: 50%;
+}
+
+.navbar .logo h1 {
+    position: absolute;
+    bottom: 2rem;
+    left: 20rem;
+    color: #fff;
+    font-size: 3rem;
+    font-weight: bold;
+    font-family: var(--title-font);
+}
+
+.navbar .logo .logo_decoration {
+    width: 230px;
+    height: 1rem;
+    position: absolute;
+    bottom: 2.2rem;
+    left: 20rem;
+    background: #FFCA42;
+}
+
+/* MAIN */
+main {
+    margin: 0.5rem 5%;
+}
+
+main .main_section {
+    padding: 0 1rem;
+}
+
+main .main_detail {
+    margin: 1rem 0;
+    font-size: 1.5rem;
+}
+
+#left_side {
+    float: left;
+    width: 45%;
+}
+
+#right_side {
+    float: left;
+    width: 55%;
+}
+
+img#school_logo {
+    position: absolute;
+    float: right;
+    right: 1rem;
+    bottom: 1rem;
+}
+
+h2.title {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    color: #1B3764;
+    text-shadow: 0.1rem 0.1rem 0.02rem rgba(27, 55, 100, 50%);
+    font-family: var(--title-font);
+}
+
+.main_detail ul li i {
+    color: #FFCA42;
+}
+
+.main_detail ul li a {
+    font-family: var(--text-font);
+    font-size: 1.5rem;
+    color: #1B3764;
+    cursor: pointer;
+}
+
+/* RESPONSIVE WINDOW */
+@media(max-width:1276px) {
+    img#school_logo {
+        position: relative;
+    }
+}
+@media(max-width:992px) {
+    
+}
+
+@media(max-width:576px) {
+    header .navbar.expand {
+        height: 130px;
+    }
+    .navbar .profile img {
+        width: 50%;
+    }
+    .navbar .logo h1 {
+        font-size: 2rem;
+        left: 15rem;
+        bottom: 1rem;
+    }
+
+    .navbar .logo .logo_decoration{
+        display: none;
+    }
+
+    .dropdown_menu {
+        top: 130px;
+    }
+
+    .main_section {
+        display: table;
+    }
+
+    .main_section#left_side, .main_section#right_side {
+        width: 100%;
+    }
+
+    main .main_detail, .main_detail ul li a {
+        font-size: 1rem;
+    }
+
+    img#school_logo {
+        position: relative;
+        bottom: 1rem;
+        right: 1rem;
+        float: right;
+    }
+}
+
+@media(max-width:400px) {
+    .navbar .logo h1 {
+        font-size: 1.5rem;
+    }
+}

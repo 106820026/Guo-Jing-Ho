@@ -1,0 +1,74 @@
+/* NAVBAR */
+header .navbar.shrink {
+    height: 70px;
+    transition: height 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+/* MAIN */
+main {
+    padding: 1rem 1rem;
+}
+
+h2.title {
+    font-size: 3rem;
+    font-family: var(--title-font);
+    color: #1B3764;
+}
+
+.projects {
+    display: flex;
+    justify-content: center;
+}
+
+.project {
+    padding: 0.5rem;
+    margin: 1rem 1rem;
+    border-radius: 20px;
+    display: block;
+    justify-content: center;
+}
+
+.projects .project .images, .projects .project .image {
+    display: flex;
+    justify-content: center;
+}
+
+.projects .project .images img, .projects .project .images video  {
+    width: calc(100vw*0.45);
+    margin: 0 1rem;
+}
+
+.projects .project .image video {
+    width: calc(100vw*0.5);
+    margin: auto;
+}
+
+h3.subtitle {
+    color: #1B3764;
+    font-size: 2.5rem;
+    text-align: center;
+}
+
+/* RESPONSIVE WINDOW */
+@media(max-width:992px) {
+    .projects .project .images {
+        display: block;
+    }
+
+    .projects .project .images img, .projects .project .images video,
+    .projects .project .image video{
+        width: 100%;
+        margin-top: 1rem;
+    }
+
+    h3.subtitle {
+        font-size: 2rem;
+    }
+    
+}
+
+@media(max-width:576px) {
+    h3.subtitle {
+        font-size: 1.5rem;
+    }
+}
