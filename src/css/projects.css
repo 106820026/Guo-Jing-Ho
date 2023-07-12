@@ -58,7 +58,7 @@ h3.subtitle {
     .projects .project .images img, .projects .project .images video,
     .projects .project .image video{
         width: 100%;
-        margin-top: 1rem;
+        margin: 1rem 0 0 0;
     }
 
     h3.subtitle {
