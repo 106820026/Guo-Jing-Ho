@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <title>CSS Specificity</title>
+        <style>
+            body {
+                font-size: 12px;
+            }
+            p .brown {
+                color: brown;
+                font-weight: 200;
+            }
+            p .large {
+                font-size: 28px;
+            }
+            .normal {
+                font-size: 18px;
+                color: blue;
+                font-weight: 700;
+            }
+        </style>
+    </head>
+    <body>
+        <div style="height: 300px; border:1px solid black;">
+            <p style="top: 10%; position:relative">test2</p>
+        </div>
+    </body>
+</html>

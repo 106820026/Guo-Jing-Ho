@@ -86,6 +86,11 @@ h2.title {
     cursor: pointer;
 }
 
+.main_detail ul li a:hover {
+    background: #1B3764;
+    color: #FFCA42;
+}
+
 /* RESPONSIVE WINDOW */
 @media(max-width:1276px) {
     img#school_logo {

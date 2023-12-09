@@ -1,0 +1,20 @@
+{
+    "about": {
+        "navbar": {
+            "logo": "何國靖",
+            "about": "關於",
+            "project": "專案",
+            "experience": "經歷",
+            "hobby": "興趣"
+        }
+    },
+    "project": {
+
+    },
+    "experience": {
+        
+    },
+    "hobby": {
+        
+    }
+}
