@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <base target="_top">
+  <script src="https://static.line-scdn.net/liff/edge/2/sdk.js"></script>
+</head>
+
+<body>
+<p id="status">載入中...</p>
+<p id="url"></p>
+<script>
+  window.onload = async function() {
+    const status = document.getElementById("status");
+    const url = document.getElementById("url");
+
+    try {
+      await liff.init({
+        liffId: "2010048012-isyfX80B"
+      });
+
+      if (!liff.isLoggedIn()) {
+        liff.login();
+        return;
+      }
+
+      if (!liff.isApiAvailable("shareTargetPicker")) {
+        alert("此環境不支援分享功能");
+        return;
+      }
+
+      const result = await liff.shareTargetPicker([
+        {
+          type: "flex",
+          altText: "海鷗找好窩小資訊",
+          contents: {
+            "type": "bubble",
+            "hero": {
+              "type": "image",
+              "url": "https://guo-jing-ho.web.app/image/lineLiff/hero.png",
+              "size": "full",
+              "aspectRatio": "20:13",
+              "aspectMode": "cover",
+              "action": {
+                "type": "uri",
+                "uri": "https://line.me/"
+              }
+            },
+            "body": {
+              "type": "box",
+              "layout": "vertical",
+              "contents": [
+                {
+                  "type": "text",
+                  "text": "王逸凱",
+                  "weight": "bold",
+                  "size": "xl"
+                },
+                {
+                  "type": "text",
+                  "text": "您的房地產顧問。在房地產市場中，我能提供您專業及全方位的服務，希望能成為您在房地產旅程中的可靠夥伴。",
+                  "wrap": true,
+                  "size": "sm"
+                },
+                {
+                  "type": "box",
+                  "layout": "horizontal",
+                  "margin": "md",
+                  "justifyContent": "flex-start",
+                  "spacing": "md",
+                  "contents": [
+                    {
+                      "type": "image",
+                      "size": "xs",
+                      "url": "https://file.vidhubfile.com/imgtok/post/o86CnyA/f_002.png",
+                      "aspectMode": "cover",
+                      "action": {
+                        "type": "uri",
+                        "uri": "https://www.youtube.com/@SeagullProperty"
+                      },
+                      "flex": 0
+                    },
+                    {
+                      "type": "image",
+                      "size": "xs",
+                      "url": "https://file.vidhubfile.com/imgtok/post/o86CnyA/f_003.png",
+                      "aspectMode": "cover",
+                      "action": {
+                        "type": "uri",
+                        "uri": "https://www.facebook.com/profile.php?id=61561970594285"
+                      },
+                      "flex": 0
+                    },
+                    {
+                      "type": "image",
+                      "size": "xs",
+                      "url": "https://file.vidhubfile.com/imgtok/post/o86CnyA/f_001.png",
+                      "aspectMode": "cover",
+                      "action": {
+                        "type": "uri",
+                        "uri": "https://www.threads.com/@ryan_9487i"
+                      },
+                      "flex": 0
+                    }
+                  ]
+                }
+              ]
+            },
+            "footer": {
+              "type": "box",
+              "layout": "vertical",
+              "spacing": "sm",
+              "contents": [
+                {
+                  "type": "box",
+                  "layout": "horizontal",
+                  "backgroundColor": "#f3eae1",
+                  "cornerRadius": "5px",
+                  "contents": [
+                    {
+                      "type": "button",
+                      "style": "link",
+                      "height": "sm",
+                      "color": "#154cff",
+                      "action": {
+                        "type": "uri",
+                        "label": "個人簡介/推薦物件",
+                        "uri": "https://ryan-house.web.app/browse.html"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "box",
+                  "layout": "horizontal",
+                  "backgroundColor": "#f3eae1",
+                  "cornerRadius": "5px",
+                  "contents": [
+                    {
+                      "type": "button",
+                      "style": "link",
+                      "height": "sm",
+                      "color": "#154cff",
+                      "action": {
+                        "type": "uri",
+                        "label": "海鷗找好窩",
+                        "uri": "https://ryan-house.web.app/"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "box",
+                  "layout": "horizontal",
+                  "backgroundColor": "#f3eae1",
+                  "cornerRadius": "5px",
+                  "contents": [
+                    {
+                      "type": "button",
+                      "style": "link",
+                      "height": "sm",
+                      "color": "#154cff",
+                      "action": {
+                        "type": "uri",
+                        "label": "加Line好友",
+                        "uri": "https://line.me/ti/p/vueesFUVjk"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "box",
+                  "layout": "horizontal",
+                  "backgroundColor": "#f3eae1",
+                  "cornerRadius": "5px",
+                  "contents": [
+                    {
+                      "type": "button",
+                      "style": "link",
+                      "height": "sm",
+                      "color": "#154cff",
+                      "action": {
+                        "type": "uri",
+                        "label": "撥打電話",
+                        "uri": "tel:0987624875"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "box",
+                  "layout": "horizontal",
+                  "backgroundColor": "#f3eae1",
+                  "cornerRadius": "5px",
+                  "contents": [
+                    {
+                      "type": "button",
+                      "style": "link",
+                      "height": "sm",
+                      "color": "#154cff",
+                      "action": {
+                        "type": "uri",
+                        "label": "分享名片",
+                        "uri": "https://liff.line.me/2010048012-isyfX80B"
+                      }
+                    }
+                  ]
+                }
+              ],
+              "flex": 0
+            }
+          }
+        }
+      ]);
+
+      if (result) {
+        liff.closeWindow();
+      }
+
+    } catch (err) {
+      console.error(err);
+      status.innerText = "錯誤：" + JSON.stringify(err);
+    }
+  }
+</script>
+</body>
+</html>
