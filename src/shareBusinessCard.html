@@ -24,8 +24,9 @@
         return;
       }
 
-      if (!liff.isApiAvailable("shareTargetPicker")) {
-        alert("此環境不支援分享功能");
+      if(!liff.isInClient()) {
+        alert("請使用 LINE App 開啟");
+        liff.closeWindow();
         return;
       }
 
